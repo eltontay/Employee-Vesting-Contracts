@@ -324,7 +324,7 @@ contract Vesting is Ownable, ReentrancyGuard {
                 vestingSchedule.amountTotal,
                 _computeRedemptionRate()
             );
-            return redemptionAmount;
+            return SafeMath.div(redemptionAmount,100);
         }
     }
 
