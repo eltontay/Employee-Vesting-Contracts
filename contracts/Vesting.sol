@@ -357,7 +357,7 @@ contract Vesting is Ownable, ReentrancyGuard {
         ); // bytes32 vesting id
         uint256 redemptionAmount = computeRedemptionAmount(vestingScheduleId); // calculate redemption amount
         uint256 redeemed = vestingSchedules[vestingScheduleId].redeemed; // amount that has already been redeemed
-        if (SafeMath.mul(redeemed, 100) == redemptionAmount) {
+        if (redeemed == redemptionAmount) {
             revert RedemptionAlreadyClaimed();
         }
         uint256 toBeRedeemed = SafeMath.sub(redemptionAmount, redeemed);
