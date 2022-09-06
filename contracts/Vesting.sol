@@ -15,7 +15,7 @@ error TransferFailed();
 /**
  * @title TokenVesting
  */
-contract TokenVesting is Ownable, ReentrancyGuard {
+contract Vesting is Ownable, ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     struct VestingSchedule {

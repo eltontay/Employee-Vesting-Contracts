@@ -25,7 +25,6 @@ contract EBLU is
 
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(SNAPSHOT_ROLE, msg.sender);
-        _mint(msg.sender, 100000 * 10**decimals());
         _grantRole(MINTER_ROLE, msg.sender);
     }
 

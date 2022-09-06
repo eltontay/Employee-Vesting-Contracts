@@ -19,12 +19,12 @@ const config: HardhatUserConfig = {
         accountsBalance: '10000000000000000000000',
       },
     },
-    matic: {
-      url: 'https://rpc-mumbai.maticvigil.com',
-      accounts: [`${process.env.METAMASK_API_KEY}`],
-      gas: 2100000,
-      gasPrice: 8000000000,
-    },
+    // matic: {
+    //   url: 'https://rpc-mumbai.maticvigil.com',
+    //   accounts: [`#0${process.env.METAMASK_API_KEY}`],
+    //   gas: 2100000,
+    //   gasPrice: 8000000000,
+    // },
   },
   etherscan: {
     apiKey: process.env.POLYGONSCAN_API_KEY,
