@@ -28,7 +28,7 @@ describe('Lock', function () {
       eBLU.address
     );
 
-    return { bluejayTokenTest, eBLU, vesting };
+    return { oracle, em1, em2, em3, bluejayTokenTest, eBLU, vesting };
   }
 
   describe('Check BluejayTokenTest Initialisation', function () {
@@ -42,6 +42,27 @@ describe('Lock', function () {
       );
     });
 
+    it('Check BluejayTokenTest Minting', async function () {
+      const { bluejayTokenTest, oracle, vesting } = await loadFixture(
+        deployOneYearLockFixture
+      );
+
+      await bluejayTokenTest.initialize();
+
+      await bluejayTokenTest.grantRole(
+        '0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6',
+        oracle.address
+      );
+
+      await bluejayTokenTest.mint(
+        vesting.address,
+        ethers.utils.parseUnits('1', 23)
+      ); // sending to Vesting contract 100,000 BLU
+
+      expect(await bluejayTokenTest.balanceOf(vesting.address)).to.equal(
+        ethers.utils.parseUnits('1', 23) // 1 million bluejaytokentest * 18 decimals
+      );
+    });
     // it("Should set the right owner", async function () {
     //   const { lock, owner } = await loadFixture(deployOneYearLockFixture);
 
