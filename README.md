@@ -1,8 +1,8 @@
-# **BlueJay Employee Token Compensation Smart Contract**
+# ** Employee Token Compensation Smart Contract**
 
 ## **Introduction**
 
-The task is to create smart contract(s) for an employee token compensation scheme at Bluejay. The compensation scheme rewards employee of Bluejay according to the overall performance of the protocol, signaled by the token's total supply.
+The task is to create smart contract(s) for an employee token compensation scheme. The compensation scheme rewards employee according to the overall performance of the protocol, signaled by the token's total supply.
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
 ## **Getting Started**
