@@ -41,9 +41,6 @@ The token should:
 - allow the company to issue any amount of eBLU to any
 - allow any holders of eBLU to redeem the BLU at any point in time
 
-## **Time Taken**
-
-~3 hours
 
 ## **Resources**
 
